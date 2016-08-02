@@ -11,7 +11,7 @@ $(document).ready(function(){
   $("form#alarm").submit(function() {
     event.preventDefault();
     var timeInput = $("input#time").val();
-    time = moment(timeInput, "hh:mm");
+    time = moment(timeInput, "hh:mm a");
     var newAlarm = new Alarm(time);
     var checkAlarm = setInterval(function(){
       if (newAlarm.alarmTrigger()) {
@@ -19,6 +19,6 @@ $(document).ready(function(){
         clearInterval(checkAlarm);
       }
     }, 1000);
-
+    $('#alarmTime').text(timeInput);
   });
 });
