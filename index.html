@@ -4,12 +4,22 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
     <title>Alarm Clock</title>
   </head>
   <body>
 
     <h3>Well look at the time! </h3>
-    <h3 id="time"></h3>
+    <div id="clock" class="clock">loading ...</div>
+
+    <h2>Set your alarm! </h2>
+    <form id="alarm">
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input id="time" class="form-control" type="time">
+      </div>
+    <button type="submit" class="btn">Submit</button>
+    </form>
 
   </body>
 </html>
